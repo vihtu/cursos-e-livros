@@ -123,6 +123,19 @@ p {
     background-color: transparent;
     border-color: transparent;
 }
+.search-bar {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  #searchInput {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
 
 .navbar {
     border: 0px solid #fff;
@@ -1213,7 +1226,7 @@ img {
 }
 
 .item_overlay:hover {
-    background: rgba(223, 0, 49, 0.7);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .item_info {
