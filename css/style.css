@@ -309,7 +309,18 @@ a.read_more2:hover {
     border: 1px solid #fff;
 }
 
-	
+
+.logo img {
+    width: 30px; /* Define a largura da logo */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaços extras ao redor */
+    margin: 0 auto; /* Centraliza a imagem se necessário */
+}
+
+.logo a {
+    display: inline-block; /* Garante que o link se ajuste ao tamanho da logo */
+    text-decoration: none; /* Remove sublinhados do link */
+}	
 
 
 
