@@ -49,25 +49,119 @@
 <!--Header_section
 
 
+header id="header_wrapper">
+  <div class="container">
+    <div class="header_box">
+      <div class="logo"><a href="#"><img src="img/llpa.png" alt="logo"></a></div>
+	  <nav class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+	    <div id="main-nav" class="collapse navbar-collapse navStyle">
+			<ul class="nav navbar-nav" id="mainNav">
+        <li class="active">
+       
+      </li>
+      
+			  <li><a href="#Portfolio" class="scroll-link">curso</a></li>
+			  <li><a href="#Portfolio" class="scroll-link">livros</a></li>
+        <li><a href="#faq" class="scroll-link">FAQ</a></li>
+		
+			</ul>
+      </div>
+	 </nav>
+    </div>
+  </div>
+</header>
+
+
 <section id="hero_section" class="top_cont_outer">
   <div class="hero_wrapper">
-    <div class="container">
-      <div class="hero_section">
-        <div class="row">
-          <div class="col-lg-5 col-sm-7">
-            <div class="top_left_cont zoomIn wow animated"> 
-              <h2>Desperte o <strong>Potencial Infinito </strong>da Sua Mente!</h2>
-              <p></p>
-              <a href="#Portfolio" class="read_more2">Desbloquear</a> </div>
+  
+            
+            </div>
           </div>
-          <div class="col-lg-7 col-sm-5">
-			<img src="https://static-media.hotmart.com/8-8HHBMU7XSOaX-ZAh8xgqnr5ZQ=/filters:background_color(white)/hotmart/product_pictures/03bbf958-5fd5-4198-a63b-b4809c0b3221/dese.jpg" class="zoomIn wow animated" alt="" />
-		  </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Importação da Biblioteca do p5.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+
+<!-- Script da Animação -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll('.card__article');
+
+    // Configuração do observer para os cards
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelector('.card__data').classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    cards.forEach(card => observer.observe(card));
+  });
+
+  let particles = [];
+
+  function setup() {
+    let canvas = createCanvas(windowWidth, windowHeight);
+    canvas.style('z-index', '-1'); // Define o canvas atrás do conteúdo
+    canvas.position(0, 0);
+
+    for (let i = 0; i < 100; i++) {
+      particles.push(new Particle());
+    }
+  }
+
+  function draw() {
+    background(0, 0, 0); // Fundo
+    for (let i = 0; i < particles.length; i++) {
+      particles[i].update();
+      particles[i].show();
+      for (let j = i + 1; j < particles.length; j++) {
+        let d = dist(particles[i].x, particles[i].y, particles[j].x, particles[j].y);
+        if (d < 80) {
+          stroke(223, 0, 49, 100); // Cor das conexões
+          line(particles[i].x, particles[i].y, particles[j].x, particles[j].y);
+        }
+      }
+    }
+  }
+
+  class Particle {
+    constructor() {
+      this.x = random(width);
+      this.y = random(height);
+      this.vx = random(-2, 2);
+      this.vy = random(-2, 2);
+    }
+
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
+
+      if (this.x < 0 || this.x > width) this.vx *= -1;
+      if (this.y < 0 || this.y > height) this.vy *= -1;
+    }
+
+    show() {
+      noStroke();
+      fill(223, 0, 49, 100);
+      circle(this.x, this.y, 5);
+    }
+  }
+
+  function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+  }
+</script>
 <!--Hero_Section--> 
 
 <section id="aboutUs"><!--Aboutus--
