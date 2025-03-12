@@ -581,7 +581,7 @@ a.contact_btn:hover {
 
 
 
- /* Estilo Geral */
+/* Estilo Geral */
 #testimonials {
     padding: 60px 0;
     background-color: #000000;
@@ -591,6 +591,7 @@ a.contact_btn:hover {
     text-align: center;
     font-size: 36px;
     margin-bottom: 20px;
+    color: #ffffff;
   }
   
   .section-title p {
@@ -615,6 +616,11 @@ a.contact_btn:hover {
     text-align: center;
     flex: 1 1 calc(33.33% - 40px); /* 3 itens por linha em telas grandes */
     max-width: calc(33.33% - 40px);
+    transition: transform 0.3s ease-in-out; /* Efeito suave ao passar o mouse */
+  }
+  
+  .testimonial-item:hover {
+    transform: translateY(-10px); /* Animação ao passar o mouse */
   }
   
   .testimonial-content p {
@@ -634,6 +640,7 @@ a.contact_btn:hover {
   .testimonial-author h4 {
     font-size: 18px;
     margin-bottom: 5px;
+    color: #ffffff;
   }
   
   .testimonial-author p {
@@ -641,14 +648,23 @@ a.contact_btn:hover {
     color: #777;
   }
   
-  /* Media Query para Telas Menores (Tablets e Celulares) */
+  /* Media Query para Telas Menores (Tablets) */
   @media (max-width: 768px) {
     .testimonial-item {
       flex: 1 1 calc(50% - 20px); /* 2 itens por linha em tablets */
       max-width: calc(50% - 20px);
     }
+  
+    .section-title h2 {
+      font-size: 32px;
+    }
+  
+    .section-title p {
+      font-size: 16px;
+    }
   }
   
+  /* Media Query para Celulares */
   @media (max-width: 480px) {
     .testimonial-item {
       flex: 1 1 100%; /* 1 item por linha em celulares */
@@ -660,7 +676,7 @@ a.contact_btn:hover {
     }
   
     .section-title p {
-      font-size: 16px;
+      font-size: 14px;
     }
   
     .testimonial-author img {
@@ -668,6 +684,18 @@ a.contact_btn:hover {
       height: 60px;
     }
   }
+  
+  /* Modo Computador em Dispositivos Móveis */
+  @media (hover: none) and (pointer: coarse) {
+    /* Detecta dispositivos móveis */
+    body {
+      zoom: 0.75; /* Reduz o zoom para simular o modo desktop */
+      overflow-x: hidden; /* Evita barra de rolagem horizontal */
+    }
+  }
+
+
+
 
 
 
