@@ -1,3 +1,4 @@
+
 /*
 Author URI: http://webthemez.com/
 Note: 
@@ -489,6 +490,220 @@ a.contact_btn:hover {
 
 /* Portfolio
 ---------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/* Estilização dos links */
+.portfolio-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Estilização da imagem no portfolio */
+  .portfolio_img img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Estilização do overlay */
+  .item_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Efeito de hover no overlay */
+  .portfolio-item:hover .item_overlay {
+    opacity: 1; /* Corrigido para 1 (opacidade máxima) */
+  }
+  
+  /* Estilização do título (botão) */
+  .project_name {
+    display: inline-block;
+    background-color: #df0031;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    margin: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+  }
+  
+  /* Efeito de hover no botão */
+  .project_name:hover {
+    background-color: #a80024; /* Cor mais escura ao passar o mouse */
+    transform: scale(1.05); /* Aumenta o botão em 5% */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+  }
+  
+  /* Estilização geral do item do portfolio */
+  .portfolio-item {
+    position: relative;
+    width: 337px;
+    margin: 10px;
+    overflow: hidden;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Estilo Geral */
+#testimonials {
+    padding: 60px 0;
+    background-color: #000000;
+  }
+  
+  .section-title h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .section-title p {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .testimonials-slider {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap; /* Permite que os itens sejam organizados em várias linhas */
+  }
+  
+  .testimonial-item {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1 1 calc(33.33% - 40px); /* 3 itens por linha em telas grandes */
+    max-width: calc(33.33% - 40px);
+  }
+  
+  .testimonial-content p {
+    font-style: italic;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-author img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial-author h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .testimonial-author p {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Media Query para Telas Menores (Tablets e Celulares) */
+  @media (max-width: 768px) {
+    .testimonial-item {
+      flex: 1 1 calc(50% - 20px); /* 2 itens por linha em tablets */
+      max-width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .testimonial-item {
+      flex: 1 1 100%; /* 1 item por linha em celulares */
+      max-width: 100%;
+    }
+  
+    .section-title h2 {
+      font-size: 28px;
+    }
+  
+    .section-title p {
+      font-size: 16px;
+    }
+  
+    .testimonial-author img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #Portfolio {
