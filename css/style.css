@@ -685,17 +685,7 @@ a.contact_btn:hover {
     }
   }
   
-  /* Modo Computador em Dispositivos Móveis */
-  @media (hover: none) and (pointer: coarse) {
-    /* Detecta dispositivos móveis */
-    body {
-      zoom: 0.75; /* Reduz o zoom para simular o modo desktop */
-      overflow-x: hidden; /* Evita barra de rolagem horizontal */
-    }
-  }
-
-
-
+ 
 
 
 
